@@ -1,0 +1,75 @@
+{
+    
+    "name": "mohamed7sameer/countries-laravel",
+
+    "description": "Countries for Laravel",
+
+    "keywords": [
+        "laravel",
+        "countries",
+        "borders",
+        "cities",
+        "currencies",
+        "flag",
+        "geometry",
+        "states",
+        "taxes",
+        "timezones",
+        "topology"
+    ],
+
+    "license": "MIT",
+
+    "authors": [
+        {
+            "name": "mohammed-samir",
+            "email": "info@mohammed-samir.com",
+            "homepage": "https://mohammed-samir.com"
+        }
+    ],
+
+    "require": {
+        "mohamed7sameer/countries": ">=0.5.8"
+    },
+
+    "require-dev": {
+        "orchestra/testbench": "~3.0|~4.0|~5.0",
+        "phpunit/phpunit": "~6.0|~7.0|~8.0|~9.0",
+        "squizlabs/php_codesniffer": "^2.3",
+        "colinodell/json5": "^1.0",
+        "gasparesganga/php-shapefile": "^2.3"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "mohamed7sameer\\CountriesLaravel\\Package\\": "src/package"
+        }
+    },
+
+    "autoload-dev": {
+        "psr-4": {
+            "mohamed7sameer\\CountriesLaravel\\Tests\\": "tests/"
+        }
+    },
+
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src test",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src test"
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "mohamed7sameer\\CountriesLaravel\\Package\\ServiceProvider"
+            ],
+            "aliases": {
+                "Countries": "mohamed7sameer\\CountriesLaravel\\Package\\Facade"
+            }
+        }
+    },
+
+    "minimum-stability": "dev",
+
+    "prefer-stable": true
+}
